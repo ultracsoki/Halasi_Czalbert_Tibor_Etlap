@@ -1,0 +1,29 @@
+﻿<Window x:Class="Etlap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Etlap"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ujFelveteleButton" Content="Új étel felvétele" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,20,0,0" Click="ujFelveteleButton_Click"/>
+        <Button x:Name="torlesButton" Content="Törlés" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,20,0,0" Click="torlesButton_Click"/>
+        <TextBox x:Name="emelesSzazalekTextBox" HorizontalAlignment="Left" Margin="92,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="emelesFtTextBox" HorizontalAlignment="Left" Margin="419,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
+        <Button x:Name="buttonSzazalekEmeles" Content="Emelés" HorizontalAlignment="Left" Margin="233,0,0,0" Grid.Row="1" VerticalAlignment="Center" Click="buttonSzazalekEmeles_Click"/>
+        <Button x:Name="buttonFtEmeles" Content="Emelés" HorizontalAlignment="Left" Margin="562,0,0,0" Grid.Row="1" VerticalAlignment="Center" Click="buttonFtEmeles_Click"/>
+        <DataGrid x:Name="dataGridEtlap" Grid.Row="2" IsReadOnly="True" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="dataGridEtlap_SelectionChanged"/>
+        <TextBlock x:Name="textBlockLeiras" HorizontalAlignment="Left" Margin="30,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="732" Height="74"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="212,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
+        <Label Content="Ft" HorizontalAlignment="Left" Margin="537,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

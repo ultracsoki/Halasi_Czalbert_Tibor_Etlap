@@ -1,0 +1,40 @@
+﻿<Window x:Class="Etlap.EtlapForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Etlap"
+        mc:Ignorable="d"
+        Title="EtlapForm" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbNev" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center"  Width="200"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbLeiras" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="414" Height="50"/>
+        <ComboBox x:Name="cbKategoria" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200">
+            <ComboBoxItem Content="Előétel"></ComboBoxItem>
+            <ComboBoxItem Content="Főétel"></ComboBoxItem>
+            <ComboBoxItem Content="Desszert"></ComboBoxItem>
+        </ComboBox>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbAr" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="200"/>
+
+        <Label Grid.Row="0" Content="Név:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Label Grid.Row="1" Content="Leírás:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Label Grid.Row="2" Content="Kategória:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Label Grid.Row="3" Content="Ár" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+        <Button Grid.Row="4" x:Name="buttonHozzaAd" Grid.Column="1" Width="200" Content="Hozzáadás" HorizontalAlignment="Left" VerticalAlignment="Top" Click="buttonHozzaAd_Click"/>
+
+
+    </Grid>
+</Window>
